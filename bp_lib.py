@@ -159,7 +159,7 @@ def bpCreateInvoice(orderId, price, posData, options = {}):
 
     pos = json.dumps(pos);
 
-    response = bpCurl('https:#bitpay.com/api/invoice/', options['apiKey'], pos);
+    response = bpCurl('https://bitpay.com/api/invoice/', options['apiKey'], pos);
 
     if bp_options.bpOptions['useLogging']:
         bpLog('Create Invoice: ')
