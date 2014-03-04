@@ -71,7 +71,10 @@ $ python
 >>> import bp_lib
 >>> bp_lib.bpCreateInvoice(123, 1, 'fish')
 </pre>
-
+After a brief pause, you should get a JSON response that looks something like:
+<pre>
+{u'status': u'new', u'invoiceTime': 1393950046292, u'currentTime': 1393950046520, u'url': u'https://bitpay.com/invoice?id=aASDF2jh4ashkASDfh234', u'price': 1, u'btcPrice': u'1.0000', u'currency': u'BTC', u'posData': u'{"posData": "fish", "hash": "ASDfkjha452345ASDFaaskjhasdlfkflkajsdf"}', u'expirationTime': 1393950946292, u'id': u'aASDF2jh4ashkASDfh234'}
+</pre>
 
 Change Log
 ----------
