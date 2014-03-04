@@ -1,6 +1,4 @@
 """
-(c)2014 BitPay, Inc.
-
 Permission is hereby granted to any person obtaining a copy of this software
 and associated documentation for use and/or modification in association with
 the bitpay.com service.
@@ -14,7 +12,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 Bitcoin Python payment library using the bitpay.com service.
-
 Version 1.0
 """
 
@@ -67,12 +64,12 @@ def bpCurl(url, apiKey, post = False):
         uname = base64.b64encode(apiKey)
 
         opener.addheaders = [
-            ('Content-Type: application/json'),
-            ('Authorization: Basic ' + uname),
+            ('Content-Type', 'application/json'),
+            ('Authorization', 'Basic ' + uname),
         ] 
 
         if post:
-            responseString = opener.open(url, urllib.urlencode(post)).read()
+            responseString = opener.open(url, urllib.urlencode(json.loads(post))).read()
         else:
             responseString = opener.open(url).read()
 
