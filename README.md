@@ -65,6 +65,12 @@ https://bitpay.com/downloads/bitpayApi.pdf
 7. Check the version of this Python library agains the official repository to ensure you are using
    the latest version. Your issue might have been addressed in a newer version of the library.
 8. If all else fails, send an email describing your issue *in detail* to support@bitpay.com
+9. To manually test the library, update the options file with your API key and do the following:
+<pre>
+$ python
+>>> import bp_lib
+>>> bp_lib.bpCreateInvoice(123, 1, 'fish')
+</pre>
 
 
 Change Log
