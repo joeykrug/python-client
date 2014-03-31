@@ -66,6 +66,7 @@ def bpCurl(url, apiKey, post = False):
         opener.addheaders = [
             ('Content-Type', 'application/json'),
             ('Authorization', 'Basic ' + uname),
+            ('X-BitPay-Plugin-Info', 'pythonlib1.1'),
         ] 
 
         if post:
