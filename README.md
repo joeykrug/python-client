@@ -1,4 +1,4 @@
-©2014 BITPAY, INC.
+<strong>©2014 BITPAY, INC.</strong>
 
 Permission is hereby granted to any person obtaining a copy of this software
 and associated documentation for use and/or modification in association with
@@ -78,5 +78,8 @@ After a brief pause, you should get a JSON response that looks something like:
 
 Change Log
 ----------
+Version 1.1
+- Added new HTTP header for version tracking
+
 Version 1
-  - Initial version
+- Initial version
