@@ -116,7 +116,6 @@ def bpCreateInvoice(orderId, price, posData, options = {}):
     #
     # If a given option is not provided here, the value of that option will default to what is found in bp_options.php
     # (see api documentation for information on these options).
-    global response
 
     options = dict(bp_options.bpOptions.items() + options.items()) # options override any options found in bp_options.php
     pos = {
