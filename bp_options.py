@@ -59,7 +59,7 @@ bpOptions['physical'] = 'true';
 bpOptions['fullNotifications'] = 'true';
 
 # transaction speed: low/medium/high.   See API docs for more details.
-bpOptions['transactionSpeed'] = 'low'; 
+bpOptions['transactionSpeed'] = 'high'; 
 
 # Logfile for use by the bpLog function.  Note: ensure the web server process has write access
 # to this file and/or directory!

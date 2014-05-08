@@ -48,13 +48,14 @@ def bpLog(contents):
         log_file.write(json.dumps(contents) + "\n")
 
 def bpCurl(url, apiKey, post = False):
+    global response
     """
     Handles post/get to BitPay via curl.
     
     @param string url, string apiKey, boolean post
     @return mixed response
     """
-
+    response = ""
     if url.strip() != '' and apiKey.strip() != '':
     
         cookie_handler= urllib2.HTTPCookieProcessor()
@@ -115,6 +116,7 @@ def bpCreateInvoice(orderId, price, posData, options = {}):
     #
     # If a given option is not provided here, the value of that option will default to what is found in bp_options.php
     # (see api documentation for information on these options).
+    global response
 
     options = dict(bp_options.bpOptions.items() + options.items()) # options override any options found in bp_options.php
     pos = {
@@ -208,7 +210,7 @@ def bpGetInvoice(invoiceId, apiKey=False):
     if not apiKey:
       apiKey = bp_options.bpOptions['apiKey']
 
-    response = bpCurl('https://bitpay.com/api/invoice/'.invoiceId, apiKey)
+    response = bpCurl('https://bitpay.com/api/invoice/'+invoiceId, apiKey)
 
     response['posData'] = json.loads(response['posData'])
     response['posData'] = response['posData']['posData']
